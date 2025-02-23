@@ -1,6 +1,3 @@
-import { ChangeEvent, FC, KeyboardEvent, useState } from 'react'
-import { FallingLines } from 'react-loader-spinner'
-import { useNavigate } from 'react-router-dom'
 import clsx from 'clsx'
 import {
     DropdownSearchItem,
@@ -9,6 +6,9 @@ import {
     selectSearchError,
     selectSearchLoading,
 } from 'features/search'
+import { ChangeEvent, FC, KeyboardEvent, useState } from 'react'
+import { FallingLines } from 'react-loader-spinner'
+import { useNavigate } from 'react-router-dom'
 import { useDebounce } from 'shared/lib/debounce'
 import { useAppDispatch, useAppSelector } from 'shared/lib/store'
 import { Dropdown } from 'shared/ui/dropdown'
