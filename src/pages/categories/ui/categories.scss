@@ -1,0 +1,40 @@
+.categories {
+    margin-bottom: 50px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        margin-bottom: 70px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+
+        .title__content {
+            margin-bottom: 2px;
+        }
+
+        .title__line {
+            width: 100%;
+        }
+    }
+
+    &__content-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        column-gap: 15px;
+    }
+
+    &__content-item {
+        min-width: 18%;
+        color: var(--text-primary);
+
+        &:hover {
+            color: var(--primary-bg);
+            cursor: pointer;
+        }
+    }
+}

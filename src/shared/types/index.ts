@@ -1,0 +1,5 @@
+export { type ICategoryItem, type TCategories } from './categoriesTypes'
+export { type IContantNavType } from './contentNavTypes'
+export { type ErrorType, type RejectedDataType } from './errorTypes'
+export { type TPrice } from './priceTypes'
+export { type ISlides } from './slidesTypes'

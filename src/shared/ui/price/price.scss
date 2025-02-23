@@ -1,0 +1,11 @@
+.price {
+    display: flex;
+    color: var(--red);
+    font-size: 20px;
+
+    sup {
+        margin-top: 5px;
+        font-size: 11px;
+        vertical-align: super;
+    }
+}

@@ -1,0 +1,42 @@
+.icon-button {
+    position: relative;
+    background: none;
+    border: none;
+
+    &__counter {
+        position: absolute;
+        top: -5px;
+        right: -3px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 20px;
+        height: 20px;
+
+        border-radius: 50%;
+        font-size: 9px;
+
+        &_theme_grey {
+            background: var(--cart-bg);
+            color: var(--text-primary);
+        }
+
+        &_theme_red {
+            background: var(--red);
+            color: var(--white);
+        }
+    }
+
+    &__icon {
+        fill: var(--text-primary);
+        width: 30px;
+        height: 30px;
+    }
+
+    &:hover {
+        fill: var(--primary-bg);
+        cursor: pointer;
+    }
+}

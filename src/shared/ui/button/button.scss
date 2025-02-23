@@ -1,0 +1,63 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+
+    transition: all 0.15s linear;
+    line-height: 1;
+    white-space: nowrap;
+    border-radius: 4px;
+
+    svg {
+        width: 18px;
+        height: 18px;
+        fill: var(--text-primary);
+
+        margin-right: 18px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover svg {
+        fill: var(--white);
+    }
+
+    &_theme_blue {
+        color: var(--white);
+        border: none;
+        background-color: var(--primary-bg);
+
+        &:hover {
+            background-color: var(--red);
+        }
+    }
+
+    &_theme_transparent-grey {
+        color: var(--text-primary);
+        border: 1px solid var(--border);
+        background-color: transparent;
+
+        &:hover {
+            color: var(--primary-bg);
+            border-color: var(--primary-bg);
+        }
+
+        &:hover svg {
+            fill: var(--primary-bg);
+        }
+    }
+
+    &_theme_transparent-blue {
+        color: var(--primary-bg);
+        border: 1px solid var(--primary-bg);
+        background-color: transparent;
+
+        &:hover {
+            color: var(--white);
+            background-color: var(--primary-bg);
+        }
+    }
+}

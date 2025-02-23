@@ -1,0 +1,46 @@
+@use 'src/app/styles/breakpoints';
+
+.footer {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    background: var(--footer-bg);
+
+    padding: 40px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__header {
+        font-size: 14px;
+
+        margin-bottom: 10px;
+    }
+
+    &__list li {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 7px;
+    }
+
+    &__list li a {
+        color: var(--text-footer);
+        font-size: 14px;
+
+        &:hover {
+            color: var(--primary-bg);
+        }
+    }
+}
+
+@media (max-width: breakpoints.$sm) {
+    .footer {
+        &__wrapper {
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+    }
+}

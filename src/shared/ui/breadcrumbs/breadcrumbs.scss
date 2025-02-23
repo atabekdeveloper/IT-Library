@@ -1,0 +1,58 @@
+@use 'src/app/styles/breakpoints';
+
+.breadcrumbs {
+    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    transition: all 0.15s ease-in-out;
+
+    padding: 26px 0;
+
+    &__img {
+        fill: var(--primary-bg);
+        height: 20px;
+        width: 18px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__item {
+        max-width: 600px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        a {
+            color: var(--text-primary);
+        }
+
+        a:hover {
+            color: var(--primary-bg);
+        }
+    }
+
+    &__item::after {
+        content: '>';
+        color: var(--black);
+        margin-left: 5px;
+    }
+
+    &__item:last-child::after {
+        content: '';
+    }
+}
+
+@media (max-width: breakpoints.$sm) {
+    .breadcrumbs {
+        padding: 15px 0;
+
+        &__item {
+            max-width: 150px;
+        }
+    }
+}

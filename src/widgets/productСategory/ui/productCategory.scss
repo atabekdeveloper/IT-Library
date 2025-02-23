@@ -1,0 +1,18 @@
+@use 'src/app/styles/breakpoints';
+
+.product-category {
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: breakpoints.$md) {
+    .product-category {
+        &__header {
+            margin-bottom: 20px;
+        }
+    }
+}

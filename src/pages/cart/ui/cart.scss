@@ -1,0 +1,153 @@
+@use 'src/app/styles/breakpoints';
+
+.cart {
+    &__table {
+        width: 100%;
+
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        border-spacing: 0;
+
+        padding: 20px 40px;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    &__col-header {
+        color: var(--text-primary);
+        font-size: 17px;
+        font-weight: normal;
+        text-align: start;
+    }
+
+    &__col {
+        border-bottom: 1px solid var(--border);
+        vertical-align: middle;
+
+        padding: 15px 0;
+    }
+
+    &__col-link {
+        display: flex;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover .cart__title {
+            color: var(--primary-bg);
+        }
+    }
+
+    &__col-total {
+        padding-top: 15px;
+    }
+
+    &__col-quantity {
+        text-wrap: nowrap;
+    }
+
+    &__title {
+        color: var(--text-primary);
+        font-size: 14px;
+
+        margin-top: 15px;
+    }
+
+    &__price {
+        font-size: 16px;
+    }
+
+    &__img {
+        height: 120px;
+
+        margin-left: -15px;
+    }
+
+    &__quantity {
+        margin: 0 10px;
+        color: var(--black);
+    }
+
+    &__button {
+        border-radius: 4px;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        outline: none;
+        background-color: transparent;
+
+        padding: 5px 10px;
+
+        cursor: pointer;
+        transition: all 0.2s linear;
+    }
+
+    .button_theme_change {
+        border: 1px solid var(--primary-bg);
+        background-color: transparent;
+        color: var(--primary-bg);
+
+        &:hover {
+            background-color: var(--primary-bg);
+            color: var(--white);
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+
+    .button_theme_remove {
+        border: 1px solid var(--red);
+        background-color: transparent;
+        color: var(--red);
+
+        margin-left: 20px;
+
+        &:hover {
+            background-color: var(--red);
+            color: var(--white);
+        }
+    }
+
+    &__elm-empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-primary);
+
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: breakpoints.$md) {
+    .cart {
+        thead {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: breakpoints.$sm) {
+    .cart {
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 10px;
+        }
+
+        &__col {
+            border: none;
+        }
+
+        &__col-title {
+            width: 100%;
+        }
+    }
+}

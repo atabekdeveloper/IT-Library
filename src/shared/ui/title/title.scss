@@ -1,0 +1,25 @@
+.title {
+    &__content {
+        font-weight: inherit;
+        color: var(--text-heading);
+
+        margin-bottom: 7px;
+    }
+
+    &__line {
+        position: relative;
+        width: 170px;
+        height: 1px;
+        background: var(--secondary-bg);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 1px;
+            background: var(--red);
+        }
+    }
+}
