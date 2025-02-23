@@ -9,7 +9,6 @@ export default defineConfig({
             include: '**/*.svg?react',
         }),
     ],
-    base: '/IT-Library/',
     resolve: {
         alias: {
             app: '/src/app',
